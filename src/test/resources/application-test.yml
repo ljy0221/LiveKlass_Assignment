@@ -1,0 +1,14 @@
+notification:
+  async:
+    core-pool-size: 2
+    max-pool-size: 5
+    queue-capacity: 50
+  retry:
+    max-attempts: 3
+    initial-delay-seconds: 0   # 테스트에서 즉시 재시도
+    multiplier: 1.0
+  stuck-recovery:
+    threshold-minutes: 0       # 테스트에서 즉시 stuck 감지
+    fix-rate-ms: 60000
+  scheduler:
+    fix-rate-ms: 60000
